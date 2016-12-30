@@ -175,7 +175,7 @@ function! gitgutter#utility#strip_trailing_new_line(line) abort
 endfunction
 
 function! gitgutter#utility#git_version() abort
-  return matchstr(system(g:gitgutter_git_executable.' --version'), '[0-9.]\+')
+  return matchstr(system(g:gitgutter_git_executable.' --version'), '[0-9]\+\.[0-9.]\+')
 endfunction
 
 " True for git v1.7.2+.
